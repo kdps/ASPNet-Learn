@@ -1,35 +1,79 @@
-# Page
+# Code
 
-## Indicates that template is blazor
+```
+@code {
+}
+```
+
+## onclick
+
+### Add OnClick Event Listener
+
+```
+<a>@currentCount</a>
+<a @onclick="IncrementCount">ClickEvent</a>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
+```
+
+
+# Header
+
+## inherits
+
+### Set Base Class
+
+```
+@inherits BlazorRocksBase
+```
+
+## Page
+
+### Indicates that template is blazor
 
 ```
 @page
 ```
 
-# Using
+## Using
 
-## Use Library
+### Use Library
 
 ```
+Microsoft.JSInterop
 Microsoft.AspNetCore.Identity
+Microsoft.AspNetCore.Authorization
+Microsoft.AspNetCore.Components.Authorization;
+Microsoft.AspNetCore.Components.Forms;
+Microsoft.AspNetCore.Components.Routing;
+Microsoft.AspNetCore.Components.Web;
+Microsoft.AspNetCore.Components.Web.Virtualization;
 RazorPagesIntro.Pages
+BlazorSample.Components
 ```
 
 ```
 @using Microsoft.AspNetCore.Identity
 ```
 
-# Model
+## Model
 
-## Send Model To Page
+### Send Model To Page
 
 ```
 @model LoginViewModel
 ```
 
-# inject
+## inject
 
-## Dependency Inject
+### Dependency Inject
 
 ```
 SignInManager<IdentityUser> SignInManager
