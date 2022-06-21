@@ -1,8 +1,78 @@
+# HTML Attribute
+
+## bind
+
+### Binding to Code Data
+
+```
+@bind:format
+@bind-Password
+```
+
+```
+<input @bind="InputValue"/>
+
+@code {
+    private string? InputValue { get; set; }
+}
+```
+
+## oninput
+
+### Add Event Listener On Input
+
+```
+@code {
+    private async Task OnPasswordChanged(ChangeEventArgs e)
+    {
+    }
+}
+```
+
+## onchange
+
+### Add Event Listener On Changed
+
+```
+<select @onchange="SelectedCarsChanged" multiple>
+    <option value="audi">Audi</option>
+    <option value="jeep">Jeep</option>
+    <option value="opel">Opel</option>
+    <option value="saab">Saab</option>
+    <option value="volvo">Volvo</option>
+</select>
+
+@code {
+    public string[] SelectedCars { get; set; } = new string[] { };
+
+    void SelectedCarsChanged(ChangeEventArgs e)
+    {
+        if (e.Value is not null)
+        {
+            SelectedCars = (string[])e.Value;
+        }
+    }
+}
+```
+
+
+
+
+
+
 # Code
 
 ```
 @code {
 }
+```
+
+## Annotation
+
+```
+Parameter *Attributes = CaptureUnmatchedValues(Boolean)
+EditorRequired
+CascadingParameter *Attributes = Name(String)
 ```
 
 ## onclick
@@ -35,6 +105,22 @@ Lambda
 
 
 # Header
+
+## Layout
+
+### Apply Layout
+
+```
+@layout BaseLayout
+```
+
+## Attribute
+
+### Apply Attribute
+
+```
+@attribute [Authorize]
+```
 
 ## inherits
 
@@ -88,6 +174,7 @@ BlazorSample.Components
 ```
 SignInManager<IdentityUser> SignInManager
 UserManager<IdentityUser> UserManager
+ILogger<ReferenceChild> Logger
 ```
 
 ```
