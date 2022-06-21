@@ -133,10 +133,15 @@
 ## Annotation
 
 ```
+StringLength *Attributes = ${Number} 'Minimum Length', ErrorMessage(String)
 AllowNull
 Parameter *Attributes = CaptureUnmatchedValues(Boolean)
 EditorRequired
 CascadingParameter *Attributes = Name(String)
+```
+
+```
+StringLegnth(10, ErrorMessage = "Text is Too Short")
 ```
 
 ## onclick
