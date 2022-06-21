@@ -2,6 +2,7 @@
 
 ## ShouldRender
 
+```razor
 @code {
     private bool shouldRender = true;
     
@@ -10,7 +11,7 @@
         return shouldRender;
     }
 }
-
+```
 
 ## OnParametersSetAsync
 
