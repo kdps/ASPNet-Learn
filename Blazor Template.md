@@ -15,7 +15,7 @@
 
 ## OnParametersSetAsync
 
-```
+```razor
 @code {
     protected override async Task OnParametersSetAsync()
     {
@@ -25,7 +25,7 @@
 
 ## OnParameter
 
-```
+```razor
 @code {
     protected override void OnParametersSet()
     {
@@ -35,7 +35,7 @@
 
 ## OnInitialized
 
-```
+```razor
 @code {
     protected override void OnInitialized()
     {
@@ -52,12 +52,12 @@
 
 ### Binding to Code Data
 
-```
+```razor
 @bind:format
 @bind-Password
 ```
 
-```
+```razor
 <input @bind="InputValue"/>
 
 @code {
@@ -69,7 +69,7 @@
 
 ### Add Event Listener On Input
 
-```
+```razor
 @code {
     private async Task OnPasswordChanged(ChangeEventArgs e)
     {
@@ -81,7 +81,7 @@
 
 ### Add Event Listener On Click
 
-```
+```razor
 <button @onclick="ClickEvent">
     Click
 </button>
@@ -97,7 +97,7 @@
 
 ### Add Event Listener On Changed
 
-```
+```razor
 <select @onchange="SelectedCarsChanged" multiple>
     <option value="audi">Audi</option>
     <option value="jeep">Jeep</option>
@@ -126,14 +126,14 @@
 
 # Code
 
-```
+```razor
 @code {
 }
 ```
 
 ## Annotation
 
-```
+```razor
 StringLength *Attributes = ${Number} 'Minimum Length', ErrorMessage(String)
 AllowNull
 Parameter *Attributes = CaptureUnmatchedValues(Boolean)
@@ -141,7 +141,7 @@ EditorRequired
 CascadingParameter *Attributes = Name(String)
 ```
 
-```
+```razor
 StringLegnth(10, ErrorMessage = "Text is Too Short")
 ```
 
@@ -149,7 +149,7 @@ StringLegnth(10, ErrorMessage = "Text is Too Short")
 
 ### Add OnClick Event Listener
 
-```
+```razor
 <a>@currentCount</a>
 <a @onclick="IncrementCount">ClickEvent</a>
 
@@ -165,7 +165,7 @@ StringLegnth(10, ErrorMessage = "Text is Too Short")
 
 Lambda
 
-```
+```razor
 <button @onclick="@(e => heading = "New heading!!!")"></button>
 
 @code {
@@ -180,7 +180,7 @@ Lambda
 
 ### Apply Layout
 
-```
+```razor
 @layout BaseLayout
 ```
 
@@ -188,13 +188,13 @@ Lambda
 
 ### Apply Attribute
 
-```
+```razor
 Authorize
 AllowAnonymous
 ```
 
 
-```
+```razor
 @attribute [Authorize]
 ```
 
@@ -202,7 +202,7 @@ AllowAnonymous
 
 ### Set Base Class
 
-```
+```razor
 @inherits BlazorRocksBase
 ```
 
@@ -210,7 +210,7 @@ AllowAnonymous
 
 ### Indicates that template is blazor
 
-```
+```razor
 @page
 ```
 
@@ -218,7 +218,7 @@ AllowAnonymous
 
 ### Use Library
 
-```
+```razor
 Microsoft.JSInteropl
 Microsoft.AspNetCore.Identityl
 Microsoft.AspNetCore.Authorizationl
@@ -232,7 +232,7 @@ RazorPagesIntro.Pagesl
 BlazorSample.Componentsl
 ```
 
-```
+```razor
 @using Microsoft.AspNetCore.Identity
 ```
 
@@ -240,7 +240,7 @@ BlazorSample.Componentsl
 
 ### Send Model To Page
 
-```
+```razor
 @model LoginViewModel
 ```
 
@@ -248,13 +248,13 @@ BlazorSample.Componentsl
 
 ### Dependency Inject
 
-```
+```razor
 SignInManager<IdentityUser> SignInManager
 UserManager<IdentityUser> UserManager
 ILogger<ReferenceChild> Logger
 AuthenticationStateProvider AuthenticationStateProvider
 ```
 
-```
+```razor
 @inject SignInManager<UserStore> SignInManager
 ```
