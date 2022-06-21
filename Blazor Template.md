@@ -23,6 +23,16 @@
 }
 ```
 
+Lambda
+
+```
+<button @onclick="@(e => heading = "New heading!!!")"></button>
+
+@code {
+    private string heading = "Initial heading";
+}
+```
+
 
 # Header
 
