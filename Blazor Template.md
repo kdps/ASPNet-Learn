@@ -251,6 +251,7 @@ BlazorSample.Componentsl
 SignInManager<IdentityUser> SignInManager
 UserManager<IdentityUser> UserManager
 ILogger<ReferenceChild> Logger
+AuthenticationStateProvider AuthenticationStateProvider
 ```
 
 ```
