@@ -1,3 +1,11 @@
+# Page
+
+## Indicates that template is blazor
+
+```
+@page
+```
+
 # Using
 
 ## Use Library
