@@ -1,6 +1,6 @@
 # AuthorizeView
 
-```
+```razor
 <AuthorizeView>
     <Authorized>
         <p>This view showing on that user is authorized</p>
@@ -14,30 +14,31 @@
 
 # PageTitle
 
-```
+```razor
 <PageTitle/>
 ```
 
 # NavLink
 
-```
+```razor
 <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
 ```
 
 # HeaderContent
 
-```
+```razor
 <HeadContent>
     <meta name="description" content="@description">
 </HeadContent>
 ```
 
 # ContextMenu
-```
+
+```razor
 services.AddScoped<ContextMenuService>();
 ```
 
-```
+```razor
 @inject ContextMenuService contextMenuService
 
 <RadzenButton Text="Show context menu with items for Radzen component" ContextMenu="@(args => ShowContextMenuWithItems(args))" />
@@ -80,11 +81,11 @@ services.AddScoped<ContextMenuService>();
 
 # Tooltip
 
-```
+```razor
 services.AddScoped<TooltipService>();
 ```
 
-```
+```razor
 @inject TooltipService tooltipService
 
 <RadzenTooltip />
@@ -109,11 +110,11 @@ services.AddScoped<TooltipService>();
 
 # Notification
 
-```
+```razor
 services.AddScoped<NotificationService>();
 ```
 
-```
+```razor
 @inject NotificationService notificationService
 
 <RadzenNotification />
@@ -124,11 +125,11 @@ services.AddScoped<NotificationService>();
 
 # Dialog
 
-```
+```razor
 services.AddScoped<DialogService>();
 ```
 
-```
+```razor
 @inject DialogService dialogService
 
 <RadzenDialog />
@@ -140,7 +141,7 @@ services.AddScoped<DialogService>();
 
 # Table
 
-```
+```razor
 TableTemplate(Items => List, TItem => Typeof List)
 TableHeader > th
 RowTemplate (Context => Class) > td
@@ -150,7 +151,7 @@ RowTemplate (Context => Class) > td
 
 <InputFile OnChange="@LoadFiles" multiple />
 
-```
+```razor
 @code {
     private void LoadFiles(InputFileChangeEventArgs e)
     {
