@@ -183,6 +183,12 @@ Lambda
 ### Apply Attribute
 
 ```
+Authorize
+AllowAnonymous
+```
+
+
+```
 @attribute [Authorize]
 ```
 
