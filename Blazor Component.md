@@ -1,3 +1,37 @@
+# AuthorizeView
+
+```
+<AuthorizeView>
+    <Authorized>
+        <p>This view showing on that user is authorized</p>
+    </Authorized>
+    <NotAuthorized>
+        <p>This view showing on that user isn't authorized</p>
+    </NotAuthorized>
+</AuthorizeView>
+```
+
+
+# PageTitle
+
+```
+<PageTitle/>
+```
+
+# NavLink
+
+```
+<NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+```
+
+# HeaderContent
+
+```
+<HeadContent>
+    <meta name="description" content="@description">
+</HeadContent>
+```
+
 # ContextMenu
 ```
 services.AddScoped<ContextMenuService>();
