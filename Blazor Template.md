@@ -1,3 +1,50 @@
+# Override Code Parameter
+
+## ShouldRender
+
+@code {
+    private bool shouldRender = true;
+    
+    protected override bool ShouldRender()
+    {
+        return shouldRender;
+    }
+}
+
+
+## OnParametersSetAsync
+
+```
+@code {
+    protected override async Task OnParametersSetAsync()
+    {
+    }
+}
+```
+
+## OnParameter
+
+```
+@code {
+    protected override void OnParametersSet()
+    {
+    }
+}
+```
+
+## OnInitialized
+
+```
+@code {
+    protected override void OnInitialized()
+    {
+    }
+}
+```
+
+
+
+
 # HTML Attribute
 
 ## bind
@@ -24,6 +71,22 @@
 ```
 @code {
     private async Task OnPasswordChanged(ChangeEventArgs e)
+    {
+    }
+}
+```
+
+## onclick
+
+### Add Event Listener On Click
+
+```
+<button @onclick="ClickEvent">
+    Click
+</button>
+
+@code {
+    private void ClickEvent(MouseEventArgs e)
     {
     }
 }
@@ -70,6 +133,7 @@
 ## Annotation
 
 ```
+AllowNull
 Parameter *Attributes = CaptureUnmatchedValues(Boolean)
 EditorRequired
 CascadingParameter *Attributes = Name(String)
@@ -143,16 +207,17 @@ Lambda
 ### Use Library
 
 ```
-Microsoft.JSInterop
-Microsoft.AspNetCore.Identity
-Microsoft.AspNetCore.Authorization
+Microsoft.JSInteropl
+Microsoft.AspNetCore.Identityl
+Microsoft.AspNetCore.Authorizationl
 Microsoft.AspNetCore.Components.Authorization;
 Microsoft.AspNetCore.Components.Forms;
 Microsoft.AspNetCore.Components.Routing;
 Microsoft.AspNetCore.Components.Web;
 Microsoft.AspNetCore.Components.Web.Virtualization;
-RazorPagesIntro.Pages
-BlazorSample.Components
+System.Diagnostics.CodeAnalysisl
+RazorPagesIntro.Pagesl
+BlazorSample.Componentsl
 ```
 
 ```
